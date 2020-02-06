@@ -37,7 +37,7 @@ class AutoSuggester:
         for i in range(0, len(chars)):
             path = chars[:-i]
             if len(get_by_path(node, path)) == 2:
-                print(del_by_path(node, path))
+                del_by_path(node, path)
 
     def suggest_words(self, prefix):
         node = self.tree
