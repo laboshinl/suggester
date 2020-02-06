@@ -27,12 +27,11 @@ class AutoSuggester:
     def add_word(self, word):
         node = self.tree
         for char in word:
-            # print(self.tree)
             node = node.setdefault(char, {})
         node[self.end] = self.end
 
     def remove_word(self, word):
-        chars = list("cra")
+        chars = list(word)
         node = self.tree
         for i in range(0, len(chars)):
             path = chars[:-i]
